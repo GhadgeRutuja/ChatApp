@@ -11,7 +11,7 @@ const Sidebar = ({ selectedUser, setSelectedUser, currentUser }) => {
   useEffect(() => {
     if (currentUser) {
       axios
-        .get(`http://localhost:3001/api/users?email=${currentUser.email}`)
+        .get(`https://chatapp-6sru.onrender.com/api/users?email=${currentUser.email}`)
         .then(res => setUserList(res.data))
         .catch(() => setUserList([]))
     }

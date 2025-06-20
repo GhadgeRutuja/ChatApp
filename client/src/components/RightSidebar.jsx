@@ -8,7 +8,7 @@ const RightSidebar = ({ selectedUser, currentUser }) => {
   useEffect(() => {
     if (selectedUser && currentUser) {
       axios
-        .get(`http://localhost:3001/api/messages?user1=${currentUser.email}&user2=${selectedUser.email}`)
+        .get(`https://chatapp-6sru.onrender.com/api/messages?user1=${currentUser.email}&user2=${selectedUser.email}`)
         .then(res => {
           console.log('Fetched messages:', res.data); // <-- Add this line
           setMediaMessages(res.data.filter(msg => msg.mediaUrl))
@@ -38,14 +38,14 @@ const RightSidebar = ({ selectedUser, currentUser }) => {
             msg.mediaUrl.match(/\.(mp4|webm|ogg)$/i) ? (
               <video
                 key={idx}
-                src={`http://localhost:3001${msg.mediaUrl}`}
+                src={`https://chatapp-6sru.onrender.com${msg.mediaUrl}`}
                 controls
                 className="w-16 h-16 rounded object-cover border border-[#282142]"
               />
             ) : (
               <img
                 key={idx}
-                src={`http://localhost:3001${msg.mediaUrl}`}
+                src={`hhttps://chatapp-6sru.onrender.com${msg.mediaUrl}`}
                 alt="Chat Media"
                 className="w-16 h-16 rounded object-cover border border-[#282142]"
               />
