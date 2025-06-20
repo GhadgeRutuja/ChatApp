@@ -45,7 +45,7 @@ const RightSidebar = ({ selectedUser, currentUser }) => {
             ) : (
               <img
                 key={idx}
-                src={`hhttps://chatapp-6sru.onrender.com${msg.mediaUrl}`}
+                src={`https://chatapp-6sru.onrender.com${msg.mediaUrl}`}
                 alt="Chat Media"
                 className="w-16 h-16 rounded object-cover border border-[#282142]"
               />

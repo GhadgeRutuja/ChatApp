@@ -27,7 +27,7 @@ const ProfilePage = () => {
       const formData = new FormData()
       formData.append('profilePic', picFile)
       formData.append('email', user.email)
-      const res = await axios.post('https://chatapp-6sru.onrender.com', formData, {
+      const res = await axios.post('https://chatapp-6sru.onrender.com/api/upload-profile-pic', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       })
       updatedUser = res.data.user

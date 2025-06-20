@@ -19,7 +19,7 @@ const LoginPage = () => {
       return
     }
     try {
-      const res = await axios.post('https://chatapp-6sru.onrender.com', form)
+      const res = await axios.post('https://chatapp-6sru.onrender.com/api/login', form)
       localStorage.setItem('currentUser', JSON.stringify(res.data.user))
       navigate('/')
     } catch (err) {
